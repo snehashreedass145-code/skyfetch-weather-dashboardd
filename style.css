@@ -322,6 +322,7 @@ h1 {
 @media (max-width: 768px) {
 
     /* TODO: Adjust forecast grid for mobile */
+
     /* .forecast-container {
            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
            Or: repeat(2, 1fr) for 2 columns on mobile
@@ -342,4 +343,86 @@ h1 {
 
     /* TODO: Adjust font sizes if needed */
 
+}
+
+/* TODO: Style .recent-searches-section */
+/* Suggestions:
+   - margin: 20px 0
+   - Initially hidden if no searches (we'll show via JS)
+*/
+.recent-searches-section {
+    margin: 20px 0;
+    display: none;
+    /* Hide by default, show when there are searches */
+}
+
+/* TODO: Style recent searches heading */
+/* Suggestions:
+   - font-size: 0.9rem or 1rem
+   - color: #666
+   - margin-bottom: 10px
+   - text-align: left
+*/
+.recent-searches-section h2 {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* TODO: Style #recent-searches-container */
+/* Suggestions:
+   - display: flex
+   - flex-wrap: wrap
+   - gap: 10px
+   - justify-content: center or flex-start
+*/
+#recent-searches-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* TODO: Style .recent-search-btn (we'll create these in JS) */
+/* Suggestions:
+   - padding: 8px 16px
+   - background: #f0f0f0 or gradient
+   - border: 1px solid #ddd
+   - border-radius: 20px (pill shape)
+   - cursor: pointer
+   - font-size: 0.9rem
+   - transition: all 0.3s
+   - No default button styling (border: none initially)
+*/
+.recent-search-btn {
+    padding: 8px 16px;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+/* TODO: Add hover effect for recent search buttons */
+/* Suggestions:
+   - background: #667eea (your theme color)
+   - color: white
+   - transform: translateY(-2px)
+   - box-shadow
+*/
+.recent-search-btn:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* TODO: Add active/click effect */
+/* Suggestions:
+   - transform: scale(0.95)
+*/
+.recent-search-btn:active {
+    transform: scale(0.95);
 }
