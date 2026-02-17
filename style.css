@@ -54,6 +54,7 @@ h1 {
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -118,6 +119,7 @@ h1 {
     flex: 1;
     font-size: 1rem;
 }
+
 /* TODO: Style #search-btn */
 /* Suggestions:
    - padding: 12px 30px
@@ -171,6 +173,7 @@ h1 {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -191,4 +194,152 @@ h1 {
     flex-direction: column;
     align-items: center;
     gap: 15px;
+}
+
+/* TODO: Style .forecast-section */
+/* Suggestions:
+   - margin-top: 30px
+   - padding-top: 30px
+   - border-top: 2px solid #eee (separator from current weather)
+*/
+.forecast-section {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px solid #eee;
+}
+
+/* TODO: Style .forecast-title */
+/* Suggestions:
+   - font-size: 1.5rem
+   - color: #333
+   - margin-bottom: 20px
+   - text-align: center or left
+*/
+.forecast-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* TODO: Style .forecast-container */
+/* Suggestions:
+   - display: grid
+   - grid-template-columns: repeat(auto-fit, minmax(120px, 1fr))
+   - Or: grid-template-columns: repeat(5, 1fr) for exactly 5 columns
+   - gap: 15px
+   - Make it responsive!
+*/
+.forecast-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+}
+
+/* TODO: Style .forecast-card */
+/* Suggestions:
+   - background: linear-gradient or solid color
+   - padding: 20px
+   - border-radius: 15px
+   - text-align: center
+   - box-shadow for depth
+   - transition for hover effect
+*/
+.forecast-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+/* TODO: Add hover effect for forecast cards */
+/* Suggestions:
+   - transform: translateY(-5px)
+   - box-shadow: larger shadow
+   - Use transition for smooth effect
+*/
+.forecast-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* TODO: Style day name in forecast cards */
+/* Example: .forecast-card h4 or .forecast-day */
+/* Suggestions:
+   - font-size: 1.1rem
+   - color: #333
+   - margin-bottom: 10px
+   - font-weight: 600
+*/
+.forecast-card h4 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* TODO: Style forecast temperature */
+/* Suggestions:
+   - font-size: 1.8rem
+   - color: #667eea (match your theme)
+   - font-weight: bold
+   - margin: 10px 0
+*/
+.forecast-card .temp {
+    font-size: 1.8rem;
+    color: #667eea;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* TODO: Style forecast description */
+/* Suggestions:
+   - font-size: 0.9rem
+   - color: #666
+   - text-transform: capitalize
+*/
+.forecast-card .description {
+    font-size: 0.9rem;
+    color: #666;
+    text-transform: capitalize;
+}
+
+/* TODO: Style forecast icons */
+/* Suggestions:
+   - width: 60px
+   - height: 60px
+   - Or adjust to your preference
+*/
+.forecast-card .icon {
+    width: 60px;
+    height: 60px;
+}
+
+/* TODO: Add media query for mobile devices */
+@media (max-width: 768px) {
+
+    /* TODO: Adjust forecast grid for mobile */
+    /* .forecast-container {
+           grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+           Or: repeat(2, 1fr) for 2 columns on mobile
+       }
+    */
+    .forecast-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    /* TODO: Adjust card padding and sizes */
+    /* .forecast-card {
+           padding: 15px;
+       }
+    */
+    .forecast-card {
+        padding: 15px;
+    }
+
+    /* TODO: Adjust font sizes if needed */
+
 }
